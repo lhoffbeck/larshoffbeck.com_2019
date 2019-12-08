@@ -1,0 +1,70 @@
+@import "../../assets/styles/index";
+
+
+.Cover {
+    display: flex;
+    align-content: center;
+    height: calc(100vh - 64px);
+    width: 100%;
+    background-image: url("../../assets/images/hero.jpg");
+    background-size: cover;
+}
+
+.Cover__TitleBlock {
+    padding: spacing(8) spacing(4);
+    width: 100%;
+    align-self: center;
+    color: $text-dark-primary;
+}
+
+.Cover__TitleBlock--Left {
+    display: none;
+
+    @include media($s) {
+        display: block;
+        flex-basis: 50%;
+    }
+
+    @include media($m) {
+        flex-basis: 40%;
+    }
+}
+
+.Cover__TitleBlock--Right {
+    flex: 1 1 auto;
+    //background-color: $pop-primary;
+    background-color: rgba($bg-light-primary, 0.5);
+    @include font-face-bold();
+    @include font-size(6);
+}
+
+.Cover__TitleBlock__SubHeading {
+    font-style: italic;
+
+    @include font-size(2);
+
+    @include media($s) {
+        @include font-size(4);
+    }
+}
+
+.Cover__TitleBlock__Heading {
+    @include font-size(6);
+    white-space: nowrap;
+
+    @include media($s) {
+        @include font-size(8);
+    }
+
+    @include media($m) {
+        @include font-size(10);
+    }
+
+    @include media($l) {
+        @include font-size(14);
+    }
+
+    @include media($xl) {
+        @include font-size(18);
+    }
+}

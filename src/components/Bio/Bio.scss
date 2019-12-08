@@ -1,0 +1,43 @@
+@import "../../assets/styles/index";
+
+
+.Bio {
+    padding: spacing(8) 0;
+
+    //background-image: url('../../assets/images/illustration_1.png');
+    //background-repeat: no-repeat;
+    //background-size: 500px;
+    //min-height: 500px;
+}
+
+.Bio__Title {
+    @include font-face-bold();
+    @include font-size(8);
+    margin-bottom: spacing(12);
+
+    color: $text-dark-primary;
+
+}
+
+.Bio__Description {
+    position: relative;
+    padding: spacing(2) spacing(1);
+    color: $text-dark-tertiary;
+    @include font-size(3);
+    line-height: 1.4em;
+    letter-spacing: 1.5px;
+
+    &:before {
+        position: absolute;
+        top: -20px;
+        left: spacing(1);
+        content: close-quote;
+        height: 2px;
+        width: 100px;
+        background-color: $text-dark-tertiary;
+    }
+
+    .highlight {
+        color: $text-light-primary;
+    }
+}

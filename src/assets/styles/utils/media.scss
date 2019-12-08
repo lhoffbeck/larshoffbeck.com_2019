@@ -1,0 +1,32 @@
+
+// breakpoints
+$xs: 400;
+$s: 750;
+$m: 950;
+$l: 1300;
+$xl: 1600;
+
+@mixin media($min: null, $max: null) {
+    $queries: ();
+    $media-query: '';
+
+    @if $min != null {
+        $queries: append($queries, 'min-width: #{$min}px');
+    }
+
+    @if $max != null {
+        $queries: append($queries, 'max-width: #{$max}px');
+    }
+
+    @if $queries == () {
+        @content;
+    } @else {
+        @each $query in $queries {
+            $media-query: if(index($queries, $query) > 1, '#{$media-query} and ', '') + '(#{$query})';
+        }
+
+        @media #{$media-query} {
+            @content;
+        }
+    }
+}

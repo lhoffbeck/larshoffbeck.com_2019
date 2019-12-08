@@ -1,0 +1,54 @@
+
+/** font sizes */
+$font-xsmall: 10px;
+$font-small: 14px;
+$font-medium: 16px;
+$font-large: 24px;
+$font-xlarge: 36px;
+$font-xxlarge: 48px;
+
+
+$base-font-size: 8px;
+
+/** fonts */
+@font-face {
+    font-family: 'BrownRegular';
+    src:url("./fonts/lineto-brown-regular.eot");
+    src:url("./fonts/lineto-brown-regular.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/lineto-brown-regular.woff") format("woff"),
+    url("./fonts/lineto-brown-regular.ttf") format("truetype"),
+    url("./fonts/lineto-brown-regular.svg#lineto-brown-regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BrownBold';
+    src:url("./fonts/lineto-brown-bold.eot");
+    src:url("./fonts/lineto-brown-bold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/lineto-brown-bold.woff") format("woff"),
+    url("./fonts/lineto-brown-bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+// Font families
+$font-family-regular: 'BrownRegular', Sans-Serif, serif;
+$font-family-bold: 'BrownBold', $font-family-regular, Sans-Serif, serif;
+
+
+@mixin font-size($scale: 1) {
+    font-size: $base-font-size * $scale;
+}
+
+@mixin font-face-regular() {
+    font-family: $font-family-regular;
+    font-weight: 400;
+}
+
+@mixin font-face-bold() {
+    font-family: $font-family-bold;
+    font-weight: 600;
+}

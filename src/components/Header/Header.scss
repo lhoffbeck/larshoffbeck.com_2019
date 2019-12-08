@@ -1,0 +1,11 @@
+@import "../../assets/styles/index";
+
+.Header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    min-height: block-size(4);
+    width: 100%;
+    z-index: 1;
+}
+

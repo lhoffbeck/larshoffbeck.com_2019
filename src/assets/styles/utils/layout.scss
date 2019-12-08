@@ -1,0 +1,16 @@
+
+$base-spacing: 4px;
+$base-block-size: 16px;
+
+
+@function spacing($modifier: 1) {
+    @return $base-spacing * $modifier;
+};
+
+
+@function block-size($modifier: 1) {
+    @return $base-block-size * $modifier;
+};
+
+
+

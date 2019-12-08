@@ -1,0 +1,29 @@
+@import "../../assets/styles/index";
+
+
+.Footer {
+    text-align: center;
+    padding: spacing(16) 0 spacing(6);
+    @include font-size(2.5);
+
+    @include media($s) {
+        text-align: left;
+    }
+
+    .Footer__Address {
+        margin-bottom: spacing(8);
+    }
+
+    .Footer__Phone {
+        margin-bottom: spacing(8);
+        letter-spacing: 0.1em;
+
+        @include media($s) {
+            @include font-size(4);
+        }
+    }
+
+    .Footer__Social {
+
+    }
+}
